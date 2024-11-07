@@ -1,0 +1,106 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Structure for Personal Information
+struct PersonalInfo {
+    string name;
+    string address;
+    string email;
+    string phone;
+};
+
+// Structure for Education
+struct Education {
+    string degree;
+    string university;
+    string graduationYear;
+    string gpa;
+};
+
+// Structure for Experience
+struct Experience {
+    string jobTitle;
+    string company;
+    string years;
+    string description;
+};
+
+// Structure for Skills
+struct Skills {
+    string technicalSkills;
+    string softSkills;
+};
+
+// Function to display resume
+void displayResume(const PersonalInfo& person, const Education& edu, const Experience& exp, const Skills& skills) {
+    cout << "===========================\n";
+    cout << "          RESUME            \n";
+    cout << "===========================\n\n";
+
+    // Display Personal Information
+    cout << "Name: " << person.name << endl;
+    cout << "Address: " << person.address << endl;
+    cout << "Email: " << person.email << endl;
+    cout << "Phone: " << person.phone << endl;
+    cout << "\n";
+
+    // Display Education
+    cout << "Education:\n";
+    cout << "Degree: " << edu.degree << endl;
+    cout << "University: " << edu.university << endl;
+    cout << "Graduation Year: " << edu.graduationYear << endl;
+    cout << "GPA: " << edu.gpa << endl;
+    cout << "\n";
+
+    // Display Experience
+    cout << "Experience:\n";
+    cout << "Job Title: " << exp.jobTitle << endl;
+    cout << "Company: " << exp.company << endl;
+    cout << "Years: " << exp.years << endl;
+    cout << "Description: " << exp.description << endl;
+    cout << "\n";
+
+    // Display Skills
+    cout << "Skills:\n";
+    cout << "Technical Skills: " << skills.technicalSkills << endl;
+    cout << "Soft Skills: " << skills.softSkills << endl;
+    cout << "\n";
+}
+
+int main() {
+    // Personal Info
+    PersonalInfo person = {
+        "Yash Mane",
+        "Baramati , Pune,
+        "yashman@mail.com",
+        "+123-456-7890"
+    };
+
+    // Education
+    Education edu = {
+        "Bachelor of Science in AI",
+        "Pune University",
+        "2027",
+        "3.8"
+    };
+
+    // Experience
+    Experience exp = {
+        "Software Engineer",
+        "Tech Solutions Inc.",
+        "2023-2024",
+        "Worked on various software development projects using C++ and other technologies."
+    };
+
+    // Skills
+    Skills skills = {
+        "C++, Python, Java, SQL",
+        "Teamwork, Communication, Problem-solving"
+    };
+
+    // Display the resume
+    displayResume(person, edu, exp, skills);
+
+    return 0;
+}
